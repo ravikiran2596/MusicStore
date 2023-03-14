@@ -1,5 +1,6 @@
 pipeline {
     agent {label (dotentagent)}
+    triggers { pollSCM('* * * * *') }
     stages {
         stage('vcs') {
             steps {
